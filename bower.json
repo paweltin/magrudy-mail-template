@@ -1,0 +1,13 @@
+{
+  "name": "magrudy-mail-template",
+  "version": "1.0.0",
+  "authors": [
+    "Mirumee Software"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "font-awesome": "~4.4.0"
+  }
+}

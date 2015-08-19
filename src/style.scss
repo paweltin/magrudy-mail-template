@@ -1,0 +1,209 @@
+// Bootstrap variables
+$body-bg: #F3F2F1;
+$brand-primary: #21849C;
+$brand-info: #96E8CA;
+$brand-danger: #D91E65;
+$hr-border: #DEDEDD;
+$btn-info-color: $brand-primary;
+$btn-info-border: $brand-info;
+$btn-border-radius-base: 2px;
+$font-family-base: 'Raleway', sans-serif;
+$icon-font-path: "/fonts/bootstrap/";
+$padding-base-vertical: 16px;
+$padding-base-horizontal: 16px;
+
+// Font Awesome variables
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.4.0/fonts";
+
+// Variables
+$hr-border-bottom: #f9faf9;
+
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "font-awesome/scss/font-awesome";
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,600,700,900);
+
+.link-view {
+	display: inline-block;
+	margin: $grid-gutter-width/2 0;
+}
+
+.container-black {
+	background: black;
+	padding: $grid-gutter-width/2 0;
+}
+
+.container-grey {
+	background: $gray;
+	margin-top: $grid-gutter-width;
+	padding: $grid-gutter-width 0;
+}
+
+h1, h2, h3 {
+	color: $brand-danger;
+	font-weight: 300;
+	margin: $grid-gutter-width 0;
+	text-transform: uppercase;
+
+	b {
+		display: block;
+	}
+}
+
+h2, h3 {
+	color: $brand-primary;
+	margin-top: 0;
+}
+
+h3 {
+	font-weight: 900;
+}
+
+b {
+	display: block;
+	font-weight: 900;
+}
+
+strong {
+	font-weight: 600;
+}
+
+.free-delivery {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	margin-bottom: $grid-gutter-width;
+	padding: 43px 40px;
+	right: 0;
+	text-transform: uppercase;
+	top: 0;
+
+	@media (min-width: $screen-sm-min) {
+		font-size: 22px;
+		padding: 38px 40px 37px;
+		position: absolute;
+		right: 100px;
+		top: 50px;
+	}
+
+	&-container {
+		position: relative;
+	}
+}
+
+.img-responsive {
+	margin-bottom: $grid-gutter-width;
+
+	@media (min-width: $screen-md-min) {
+		max-width: 70%;
+	}
+}
+
+.logo {
+	margin-bottom: 0;
+}
+
+.potential {
+	font-weight: 600;
+	margin: 0 auto;
+	@media (min-width: $screen-sm-min) {
+		max-width: 60%;
+	}
+}
+
+.flow-text {
+	@media (min-width: $screen-sm-min) {
+		font-size: 18px;
+	}
+}
+
+.separate-from-btn {
+	margin-bottom:  $grid-gutter-width;
+}
+
+.btn {
+	font-weight: 900;
+	letter-spacing: 3px;
+	margin: 0 $grid-gutter-width/2;
+	text-transform: uppercase;
+
+	@media (max-width: $screen-xs-max) {
+		&:not(:last-child) {
+			margin-bottom: $grid-gutter-width;
+		}
+	}
+}
+
+hr {
+	border-bottom: 1px solid $hr-border-bottom;
+	margin: $grid-gutter-width 0;
+}
+
+.col-bordered {
+	padding: 0 $grid-gutter-width;
+
+	&:first-child {
+		&:after {
+			@media (min-width: $screen-sm-min) {
+				border-right: 1px solid $hr-border;
+				bottom: 0;
+				content: "";
+				height: 100%;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+}
+
+.header-fancy {
+	color: white;
+	font-size: 28px;
+	font-weight: 900;
+	letter-spacing: 5px;
+	margin-bottom: $grid-gutter-width;
+	position: relative;
+	text-transform: uppercase;
+
+	&:after {
+		border-top: 2px solid white;
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		margin-top: -1px;
+		z-index: 1;
+	}
+
+	span {
+		background: $gray;
+		padding: 0 $grid-gutter-width;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.list-social {
+	@extend .list-inline;
+	font-size: 42px;
+
+	a {
+		color: $brand-info;
+		padding: 0 $grid-gutter-width/4;
+
+		&:hover {
+			color: darken($brand-info, 10%);
+		}
+	}
+}
+
+footer {
+	margin: $grid-gutter-width 0;
+
+	p {
+		margin: 0;
+	}
+}

@@ -1,0 +1,7 @@
+.*
+!.gitignore
+bower_components
+node_modules
+*.map
+fonts
+img
