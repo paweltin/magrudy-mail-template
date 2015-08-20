@@ -9,8 +9,8 @@ $btn-info-border: $brand-info;
 $btn-border-radius-base: 2px;
 $font-family-base: 'Raleway', sans-serif;
 $icon-font-path: "/fonts/bootstrap/";
-$padding-base-vertical: 16px;
-$padding-base-horizontal: 16px;
+$padding-base-vertical: 12px;
+$padding-base-horizontal: 12px;
 
 // Font Awesome variables
 $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.4.0/fonts";
@@ -76,46 +76,18 @@ strong {
 }
 
 .free-delivery {
-	display: inline-block;
 	font-weight: 600;
-	letter-spacing: 3px;
-	margin-bottom: $grid-gutter-width;
+	letter-spacing: 2px;
 	padding: 30px 28px;
 	text-transform: uppercase;
-
-	@media (min-width: $screen-sm-min) {
-		position: absolute;
-		left: calc(50% + 120px);
-		top: 15px;
-	}
-
-	&-container {
-		position: relative;
-	}
 }
 
 .img-responsive {
 	margin-bottom: $grid-gutter-width/2;
 	max-width: 50%;
 
-	@media (min-width: $screen-md-min) {
-		max-width: 40%;
-	}
-
-	&.img-smaller {
-		@media (min-width: $screen-md-min) {
-			max-width: 25%;
-		}
-	}
-
-	&.img-bigger {
-		@media (min-width: $screen-sm-min) {
-			max-width: 80%;
-		}
-
-		@media (min-width: $screen-lg-min) {
-			max-width: 63.2%;
-		}
+	&.img-content {
+		width: 160px;
 	}
 }
 
@@ -124,16 +96,14 @@ strong {
 
 	&, &-bottom {
 		height: 60px;
+		width: 60px;
 	}
 }
 
 .potential {
 	font-weight: 600;
 	margin: 0 auto;
-
-	@media (min-width: $screen-sm-min) {
-		max-width: 60%;
-	}
+	max-width: 640px;
 }
 
 .separate-from-btn {
@@ -142,15 +112,9 @@ strong {
 
 .btn {
 	font-weight: 900;
-	letter-spacing: 3px;
-	margin: 0 $grid-gutter-width/2;
+	letter-spacing: 1px;
+	margin: 0 5px;
 	text-transform: uppercase;
-
-	@media (max-width: $screen-xs-max) {
-		&:not(:last-child) {
-			margin-bottom: $grid-gutter-width;
-		}
-	}
 }
 
 hr {
@@ -220,23 +184,26 @@ hr {
 
 .list-social {
 	@extend .list-inline;
-	margin-bottom: 5px;
-	font-size: 36px;
+	margin: $grid-gutter-width/2 0;
 
 	a {
-		color: $brand-info;
 		padding: 0 $grid-gutter-width/5;
 
-		&:hover {
-			color: darken($brand-info, 10%);
+		.img-social {
+			vertical-align: text-top;
+			width: 31px;
 		}
 	}
 }
 
-footer {
-	margin: $grid-gutter-width/2 0;
-
-	p {
-		margin: 0;
+/* No other way :( */
+center {
+	br {
+		display: none !important;
 	}
+}
+
+#canspamBarWrapper {
+	background-color: $body-bg !important;
+	border-top: none !important;
 }

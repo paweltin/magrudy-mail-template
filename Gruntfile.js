@@ -51,6 +51,9 @@ module.exports = function(grunt) {
     },
     uncss: {
       dist: {
+        options: {
+          ignore: [/center/, "#canspamBarWrapper"]
+        },
         files: {
           "src/style.css": "src/index.html"
         }
