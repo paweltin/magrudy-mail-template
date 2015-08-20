@@ -21,7 +21,7 @@ $hr-border-bottom: #f9faf9;
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "font-awesome/scss/font-awesome";
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,600,700,900);
+@import url("//fonts.googleapis.com/css?family=Raleway:400,300,600,700,900");
 
 .link-view {
 	display: inline-block;
@@ -80,11 +80,10 @@ strong {
 	font-weight: 600;
 	letter-spacing: 3px;
 	margin-bottom: $grid-gutter-width;
-	padding: 43px 40px;
+	padding: 30px 28px;
 	text-transform: uppercase;
 
 	@media (min-width: $screen-sm-min) {
-		padding: 33px 28px;
 		position: absolute;
 		left: calc(50% + 120px);
 		top: 15px;
