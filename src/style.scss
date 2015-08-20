@@ -25,7 +25,11 @@ $hr-border-bottom: #f9faf9;
 
 .link-view {
 	display: inline-block;
-	margin: $grid-gutter-width/2 0;
+	margin: $grid-gutter-width/4 0;
+}
+
+small {
+	font-size: 86%;
 }
 
 .container-black {
@@ -36,13 +40,14 @@ $hr-border-bottom: #f9faf9;
 .container-grey {
 	background: $gray;
 	margin-top: $grid-gutter-width;
-	padding: $grid-gutter-width 0;
+	padding: $grid-gutter-width/2 0 0;
 }
 
 h1, h2, h3 {
 	color: $brand-danger;
+	font-size: 24px;
 	font-weight: 300;
-	margin: $grid-gutter-width 0;
+	margin: $grid-gutter-width 0 $grid-gutter-width/2;
 	text-transform: uppercase;
 
 	b {
@@ -52,10 +57,12 @@ h1, h2, h3 {
 
 h2, h3 {
 	color: $brand-primary;
+	font-size: 20px;
 	margin-top: 0;
 }
 
 h3 {
+	font-size: 18px;
 	font-weight: 900;
 }
 
@@ -70,21 +77,17 @@ strong {
 
 .free-delivery {
 	display: inline-block;
-	font-size: 16px;
 	font-weight: 600;
 	letter-spacing: 3px;
 	margin-bottom: $grid-gutter-width;
 	padding: 43px 40px;
-	right: 0;
 	text-transform: uppercase;
-	top: 0;
 
 	@media (min-width: $screen-sm-min) {
-		font-size: 22px;
-		padding: 38px 40px 37px;
+		padding: 33px 28px;
 		position: absolute;
-		right: 100px;
-		top: 50px;
+		left: calc(50% + 120px);
+		top: 15px;
 	}
 
 	&-container {
@@ -93,28 +96,44 @@ strong {
 }
 
 .img-responsive {
-	margin-bottom: $grid-gutter-width;
+	margin-bottom: $grid-gutter-width/2;
+	max-width: 50%;
 
 	@media (min-width: $screen-md-min) {
-		max-width: 70%;
+		max-width: 40%;
+	}
+
+	&.img-smaller {
+		@media (min-width: $screen-md-min) {
+			max-width: 25%;
+		}
+	}
+
+	&.img-bigger {
+		@media (min-width: $screen-sm-min) {
+			max-width: 80%;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			max-width: 63.2%;
+		}
 	}
 }
 
 .logo {
 	margin-bottom: 0;
+
+	&, &-bottom {
+		height: 60px;
+	}
 }
 
 .potential {
 	font-weight: 600;
 	margin: 0 auto;
+
 	@media (min-width: $screen-sm-min) {
 		max-width: 60%;
-	}
-}
-
-.flow-text {
-	@media (min-width: $screen-sm-min) {
-		font-size: 18px;
 	}
 }
 
@@ -144,7 +163,22 @@ hr {
 	padding: 0 $grid-gutter-width;
 
 	&:first-child {
+		@media (max-width: $screen-xs-max) {
+			margin-bottom: $grid-gutter-width;
+			padding-bottom: $grid-gutter-width/2;
+		}
+
 		&:after {
+			@media (max-width: $screen-xs-max) {
+				border-top: 1px solid $hr-border;
+				border-bottom: 1px solid $hr-border-bottom;
+				bottom: 0;
+				content: "";
+				left: $grid-gutter-width/2;
+				position: absolute;
+				right: $grid-gutter-width/2;
+			}
+
 			@media (min-width: $screen-sm-min) {
 				border-right: 1px solid $hr-border;
 				bottom: 0;
@@ -160,27 +194,26 @@ hr {
 
 .header-fancy {
 	color: white;
-	font-size: 28px;
+	font-size: 18px;
 	font-weight: 900;
-	letter-spacing: 5px;
-	margin-bottom: $grid-gutter-width;
+	letter-spacing: 3px;
+	margin-bottom: $grid-gutter-width/4;
 	position: relative;
 	text-transform: uppercase;
 
 	&:after {
-		border-top: 2px solid white;
+		border-top: 1px solid white;
 		content: "";
 		position: absolute;
 		top: 50%;
 		left: 0;
 		right: 0;
-		margin-top: -1px;
 		z-index: 1;
 	}
 
 	span {
 		background: $gray;
-		padding: 0 $grid-gutter-width;
+		padding: 0 20px;
 		position: relative;
 		z-index: 2;
 	}
@@ -188,11 +221,12 @@ hr {
 
 .list-social {
 	@extend .list-inline;
-	font-size: 42px;
+	margin-bottom: 5px;
+	font-size: 36px;
 
 	a {
 		color: $brand-info;
-		padding: 0 $grid-gutter-width/4;
+		padding: 0 $grid-gutter-width/5;
 
 		&:hover {
 			color: darken($brand-info, 10%);
@@ -201,7 +235,7 @@ hr {
 }
 
 footer {
-	margin: $grid-gutter-width 0;
+	margin: $grid-gutter-width/2 0;
 
 	p {
 		margin: 0;
