@@ -23,6 +23,21 @@ $hr-border-bottom: #f9faf9;
 
 @import url("//fonts.googleapis.com/css?family=Raleway:400,300,600,700,900");
 
+html {
+	background: none;
+}
+
+body {
+	background: none;
+}
+
+.wrapper {
+	background: $body-bg;
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 0 $grid-gutter-width;
+}
+
 .link-view {
 	display: inline-block;
 	margin: $grid-gutter-width/4 0;
@@ -34,13 +49,15 @@ small {
 
 .container-black {
 	background: black;
-	padding: $grid-gutter-width/2 0;
+	margin: 0 (-$grid-gutter-width);
+	padding: $grid-gutter-width/2;
 }
 
 .container-grey {
 	background: $gray;
-	margin-top: $grid-gutter-width;
-	padding: $grid-gutter-width/2 0 0;
+	margin: $grid-gutter-width (-$grid-gutter-width) 0;
+	overflow: hidden;
+	padding: $grid-gutter-width/2 $grid-gutter-width/2 0;
 }
 
 h1, h2, h3 {
@@ -119,7 +136,7 @@ strong {
 
 hr {
 	border-bottom: 1px solid $hr-border-bottom;
-	margin: $grid-gutter-width 0;
+	margin: $grid-gutter-width (-$grid-gutter-width/2);
 }
 
 .col-bordered {
