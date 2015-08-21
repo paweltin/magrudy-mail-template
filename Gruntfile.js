@@ -19,14 +19,17 @@ module.exports = function(grunt) {
         }
       }
     },
-    inline: {
-      dist: {
-        options: {
-          tag: ''
-        },
-        src: "src/index.html",
-        dest: "index.html"
-      }
+    inlinecss: {
+        main: {
+            options: {
+                "webResources": {
+                    "images": false
+                }
+            },
+            files: {
+                "index.html": "src/index.html"
+            }
+        }
     },
     postcss: {
       options: {
@@ -49,16 +52,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    uncss: {
-      dist: {
-        options: {
-          ignore: [/center/, "#canspamBarWrapper"]
-        },
-        files: {
-          "src/style.css": "src/index.html"
-        }
-      }
-    },
     watch: {
       options: {
         atBegin: true,
@@ -78,6 +71,6 @@ module.exports = function(grunt) {
 
   require("load-grunt-tasks")(grunt);
 
-  grunt.registerTask("default", ["sass", "uncss", "postcss", "inline"]);
+  grunt.registerTask("default", ["sass", "postcss", "inlinecss"]);
   grunt.registerTask("sync", ["browserSync", "watch"]);
 };

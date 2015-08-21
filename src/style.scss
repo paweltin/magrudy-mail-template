@@ -10,7 +10,7 @@ $btn-border-radius-base: 2px;
 $font-family-base: 'Raleway', sans-serif;
 $icon-font-path: "/fonts/bootstrap/";
 $padding-base-vertical: 12px;
-$padding-base-horizontal: 12px;
+$padding-base-horizontal: 10px;
 
 // Font Awesome variables
 $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.4.0/fonts";
@@ -35,7 +35,6 @@ body {
 	background: $body-bg;
 	margin: 0 auto;
 	max-width: 800px;
-	padding: 0 $grid-gutter-width;
 }
 
 .link-view {
@@ -49,15 +48,18 @@ small {
 
 .container-black {
 	background: black;
-	margin: 0 (-$grid-gutter-width);
 	padding: $grid-gutter-width/2;
 }
 
 .container-grey {
 	background: $gray;
-	margin: $grid-gutter-width (-$grid-gutter-width) 0;
+	margin: $grid-gutter-width 0 0;
 	overflow: hidden;
 	padding: $grid-gutter-width/2 $grid-gutter-width/2 0;
+}
+
+.container-regular {
+	padding: 0 $grid-gutter-width;
 }
 
 h1, h2, h3 {
@@ -130,72 +132,30 @@ strong {
 .btn {
 	font-weight: 900;
 	letter-spacing: 1px;
-	margin: 0 5px;
 	text-transform: uppercase;
+
+	&-first {
+		margin-right: 10px;
+	}
 }
 
 hr {
 	border-bottom: 1px solid $hr-border-bottom;
-	margin: $grid-gutter-width (-$grid-gutter-width/2);
-}
-
-.col-bordered {
-	padding: 0 $grid-gutter-width;
-
-	&:first-child {
-		@media (max-width: $screen-xs-max) {
-			margin-bottom: $grid-gutter-width;
-			padding-bottom: $grid-gutter-width/2;
-		}
-
-		&:after {
-			@media (max-width: $screen-xs-max) {
-				border-top: 1px solid $hr-border;
-				border-bottom: 1px solid $hr-border-bottom;
-				bottom: 0;
-				content: "";
-				left: $grid-gutter-width/2;
-				position: absolute;
-				right: $grid-gutter-width/2;
-			}
-
-			@media (min-width: $screen-sm-min) {
-				border-right: 1px solid $hr-border;
-				bottom: 0;
-				content: "";
-				height: 100%;
-				position: absolute;
-				right: 0;
-				top: 0;
-			}
-		}
-	}
+	margin: $grid-gutter-width $grid-gutter-width/2;
 }
 
 .header-fancy {
+	background: url("https://magrudy-static.s3.amazonaws.com/back_to_school_newsletter/px.png") repeat-x left;
 	color: white;
 	font-size: 18px;
 	font-weight: 900;
 	letter-spacing: 3px;
 	margin-bottom: $grid-gutter-width/4;
-	position: relative;
 	text-transform: uppercase;
-
-	&:after {
-		border-top: 1px solid white;
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: 0;
-		right: 0;
-		z-index: 1;
-	}
 
 	span {
 		background: $gray;
 		padding: 0 20px;
-		position: relative;
-		z-index: 2;
 	}
 }
 
@@ -211,16 +171,4 @@ hr {
 			width: 31px;
 		}
 	}
-}
-
-/* No other way :( */
-center {
-	br {
-		display: none !important;
-	}
-}
-
-#canspamBarWrapper {
-	background-color: $body-bg !important;
-	border-top: none !important;
 }

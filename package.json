@@ -12,8 +12,6 @@
     "autoprefixer-core": "~5.2.1",
     "csswring": "~3.0.5",
     "load-grunt-tasks": "~3.2.0",
-    "grunt-inline-css": "~0.1.5",
-    "grunt-uncss": "~0.4.3",
-    "grunt-inline": "~0.3.6"
+    "grunt-inline-css": "~0.1.5"
   }
 }
