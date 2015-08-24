@@ -77,7 +77,7 @@ h1, h2, h3 {
 h2, h3 {
 	color: $brand-primary;
 	font-size: 20px;
-	margin-top: 0;
+	margin-top: 0 !important;
 }
 
 h3 {
@@ -95,10 +95,15 @@ strong {
 }
 
 .free-delivery {
-	font-weight: 600;
+	background: $brand-primary;
+	border-radius: 50%;
+	box-sizing: content-box;
+	color: white;
 	letter-spacing: 2px;
+	margin: 0 auto $grid-gutter-width;
 	padding: 30px 28px;
 	text-transform: uppercase;
+	width: 104px;
 }
 
 .img-responsive {
@@ -107,6 +112,15 @@ strong {
 
 	&.img-content {
 		width: 160px;
+	}
+
+	&.img-icon {
+		margin: {
+			left: auto;
+			right: auto;
+		}
+		max-height: 35px;
+		width: auto;
 	}
 }
 
